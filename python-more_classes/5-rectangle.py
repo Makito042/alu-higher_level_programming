@@ -8,20 +8,9 @@
 class Rectangle:
 
     """
-    this class defines a rectangle, with a private
-    instance attribute width ahd height
-    and public instance class number_of_instances
-
-    Attributes:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
-        number_of_instances (int): The number
-        of instances of the class Rectangle
-
+        this class defines a rectangle, with a private
+        instance attribute wid ahd height
     """
-    number_of_instances = 0
-    print_symbol = "#"
-
     def __init__(self, width=0, height=0):
 
         """
@@ -32,7 +21,6 @@ class Rectangle:
         """
         self.width = width
         self.height = height
-        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -136,8 +124,8 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ""
         for i in range(self.__height - 1):
-            drw_rec += str(self.print_symbol) * self.__width + "\n"
-        drw_rec += str(self.print_symbol) * self.__width
+            drw_rec += "#" * self.__width + "\n"
+        drw_rec += "#" * self.__width
         return(drw_rec)
 
     def __repr__(self):
@@ -159,4 +147,3 @@ class Rectangle:
 
         """
         print("Bye rectangle ...")
-        Rectangle.number_of_instances -= 1
