@@ -1,25 +1,16 @@
 #!/usr/bin/python3
-"""
-this is a add module it works in cojection
-with the 0-main.py 
+# 0-add_integer.py
+"""Defines an integer addition function."""
 
-"""
+
 def add_integer(a, b=98):
+    """Return the integer addition of a and b.
+    Float arguments are typecasted to ints before addition is performed.
+    Raises:
+        TypeError: If either of a or b is a non-integer and non-float.
     """
-    Returns a * b
-    """
-    if not isinstance(a, (int, float)):
+    if ((not isinstance(a, int) and not isinstance(a, float))):
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if ((not isinstance(b, int) and not isinstance(b, float))):
         raise TypeError("b must be an integer")
-    if a is None and b is None:
-        raise TypeError("Both a and b cant be None")
-    elif a is None:
-        raise TypeError("a must be an integer")
-    if not a and not b:
-        raise ValueError("Both a and b cant be empty")
-    elif not a:
-        raise ValueError("a cant be empty")
-    a = int(a)
-    b = int(b)
-    return a + b
+    return (int(a) + int(b))
