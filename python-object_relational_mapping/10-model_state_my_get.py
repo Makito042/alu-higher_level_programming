@@ -1,4 +1,3 @@
-10-model_state_my_get.py
 #!/usr/bin/python3
 """ prints the State object with the name passed as argument from the database
 """
